@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour {
 
 	void Start() {
 		// After the specified time... call LoadNextLevel()
-		print("TIME: " + autoLoadNextLevelTime);
+		print("Time Till Next Level: " + autoLoadNextLevelTime);
 		Invoke("LoadNextLevel", autoLoadNextLevelTime);
 	}
 	
@@ -23,6 +23,6 @@ public class LevelManager : MonoBehaviour {
 	
 	public void LoadNextLevel() {
 		Debug.Log("Load next level");
-	 	Application.LoadLevel(Application.loadedLevel + 1);
+		Application.LoadLevel(Application.loadedLevel + 1);
 	}
 }
