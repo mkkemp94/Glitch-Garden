@@ -16,7 +16,7 @@ public class MusicManager : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 	}
 	
-	public void OnLevelWasLoaded(int level) {
+	void OnLevelWasLoaded(int level) {
 		AudioClip thisLevelMusic = levelMusicChangeArray[level];
 		Debug.Log("Play music for level: " + level + " : " + thisLevelMusic);
 		if (thisLevelMusic) {

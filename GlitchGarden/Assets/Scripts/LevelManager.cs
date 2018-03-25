@@ -8,7 +8,9 @@ public class LevelManager : MonoBehaviour {
 	void Start() {
 		// After the specified time... call LoadNextLevel()
 		print("Time Till Next Level: " + autoLoadNextLevelTime);
-		Invoke("LoadNextLevel", autoLoadNextLevelTime);
+		if (autoLoadNextLevelTime != 0) {
+			Invoke("LoadNextLevel", autoLoadNextLevelTime);
+		}
 	}
 	
 	public void LoadLevel(string name) {
