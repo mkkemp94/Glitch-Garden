@@ -6,9 +6,10 @@ public class LevelManager : MonoBehaviour {
 	public float autoLoadNextLevelTime;
 
 	void Start() {
-		// After the specified time... call LoadNextLevel()
-		print("Time Till Next Level: " + autoLoadNextLevelTime);
-		if (autoLoadNextLevelTime != 0) {
+		if (autoLoadNextLevelTime == 0) {
+			Debug.Log("Auto load next level disabled.");
+		} else {
+			// After the specified time... call LoadNextLevel()
 			Invoke("LoadNextLevel", autoLoadNextLevelTime);
 		}
 	}
